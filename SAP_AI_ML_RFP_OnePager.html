@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="kc-review-date" content="2027-04-19">
+<meta name="kc-classification" content="Internal">
+<meta name="kc-audience" content="Employee + Technical">
+<!-- SAP AI & ML Platform — RFP Response | Internal | Employee + Technical | Generated: October 2026 | Sources: SAP_AI_ML_RFP_Response.html | Design: CANONICAL_DESIGN_SYSTEM v3.3 - One-Pager Template v2.1.0 -->
+<title>SAP AI &amp; ML Platform — RFP Response</title>
+<style>
+/* CANONICAL DESIGN SYSTEM v3.3 - ONE-PAGER TEMPLATE v2.0.0
+   Source: knowledgecanvas-cpit@6 | DO NOT MODIFY - copy verbatim. */
+:root,[data-theme='light']{
+  --color-background:#ffffff;--color-background-secondary:#f2f4f5;--color-background-tertiary:#e5e8ea;
+  --color-title:#354a5f;--color-heading:#283949;--color-text:#1a2733;
+  --color-text-secondary:#354a5f;--color-text-tertiary:#4f657a;
+  --color-accent:#0070f2;--color-on-accent:#ffffff;
+  --color-accent-text:#0057d2;
+  --color-border:#c1cbd4;--color-reference-line:#354a5f;--color-track:#eaecee;
+  --color-positive:#188918;--color-on-positive:#ffffff;--color-positive-text:#19711f;--color-positive-background:#ebf5cb;
+  --color-warning:#c35500;--color-on-warning:#ffffff;--color-warning-text:#994a0d;--color-warning-background:#fff3b8;
+  --color-negative:#d20a0a;--color-on-negative:#ffffff;
+  --color-negative-text:#a41114;--color-negative-background:#ffd0e7;
+  --color-informative:#0070f2;--color-on-informative:#ffffff;--color-informative-text:#075ec2;--color-informative-background:#d1efff;
+  --color-neutral:#475e75;--color-on-neutral:#ffffff;--color-neutral-text:#3c5065;
+}
+:root{
+  --b:#0070F2;--dp:#00144a;--ind:#5d36ff;
+  --go:#F0AB00;--gd:#C68400;--gl:#FFF9E0;
+  --gr:#1A7F4B;--grl:#D1FAE5;
+  --gb:#eaecee;--gm:#5b738b;--gt:#475e75;--gk:#12171c;--bg:#f4f6f8;
+  --f:"72","72 Brand",Arial,sans-serif;
+  --r:14px;--sh:0 4px 24px rgba(0,0,0,.08);--sl:0 12px 40px rgba(0,0,0,.14)
+}
+@keyframes pg{0%,100%{box-shadow:0 0 0 0 rgba(240,171,0,.4)}50%{box-shadow:0 0 0 8px rgba(240,171,0,0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes orb{to{transform:rotate(360deg)}}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes rp{0%,100%{opacity:1}50%{opacity:.5}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:#fff;color:var(--color-text);line-height:1.5}
+a{color:var(--color-accent-text)}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,112,242,.1);overflow:hidden}
+#np{height:3px;background:linear-gradient(90deg,var(--b),var(--go));width:0%;transition:width .15s linear}
+.ni{max-width:1000px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+.nlogo{display:flex;align-items:center;gap:14px}
+.nt{font-size:.95rem;font-weight:700;color:var(--dp);line-height:1.2}
+.ns{font-size:.75rem;color:var(--gm);line-height:1.2}
+.ndoc{background:var(--b);color:#fff;border:none;border-radius:20px;padding:10px 22px;font-size:.82rem;font-weight:600;cursor:pointer;transition:background .2s;text-decoration:none;touch-action:manipulation}
+.ndoc:hover{background:#0060d0}
+.hero{background:linear-gradient(135deg,#fff 0%,#f8fafb 50%,var(--gl) 100%);padding:80px 24px 72px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,112,242,.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.hi{max-width:1000px;margin:0 auto;position:relative;z-index:1}
+.horb{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:420px;height:420px;opacity:.7;pointer-events:none}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(240,171,0,.18);border:1px solid rgba(240,171,0,.45);padding:5px 14px;border-radius:20px;font-size:.78rem;font-weight:600;color:var(--dp);margin-bottom:18px;animation:fadeUp .6s ease .1s both;width:fit-content}
+.hbadge-dot{width:8px;height:8px;border-radius:50%;background:var(--go);flex-shrink:0;animation:pg 2s ease-in-out infinite}
+h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.1;background:linear-gradient(110deg,#00144a 0%,#0070F2 45%,#8C6A00 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;animation:fadeUp .6s ease .2s both;max-width:620px}
+.hsub{font-size:1.15rem;color:var(--gt);font-style:italic;line-height:1.6;margin-bottom:32px;max-width:540px;animation:fadeUp .6s ease .3s both}
+.hcta{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .6s ease .4s both}
+.btn-p{background:var(--b);color:#fff;border:none;border-radius:20px;padding:12px 28px;font-size:.9rem;font-weight:600;cursor:pointer;transition:background .2s;text-decoration:none;display:inline-flex;align-items:center;touch-action:manipulation}
+.btn-p:hover{background:#0060d0}
+.btn-s{background:transparent;color:var(--b);border:1.5px solid var(--b);border-radius:20px;padding:12px 28px;font-size:.9rem;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;touch-action:manipulation}
+.btn-s:hover{background:rgba(0,112,242,.08)}
+.hstats{display:flex;gap:16px;flex-wrap:wrap;margin-top:40px;animation:fadeUp .6s ease .5s both}
+.hsk{background:rgba(255,255,255,.85);border:1px solid rgba(0,112,242,.12);border-radius:12px;padding:14px 20px;box-shadow:0 4px 20px rgba(0,0,0,.08);min-width:120px;backdrop-filter:blur(8px)}
+.hsk .n{font-size:1.8rem;font-weight:800;color:var(--dp);display:block}
+.hsk .l{font-size:.82rem;color:var(--gm);font-weight:500;display:block;margin-top:2px}
+.hsk.go{border-top:3px solid var(--go)}.hsk.bl{border-top:3px solid var(--b)}.hsk.ind{border-top:3px solid var(--ind)}.hsk.gr{border-top:3px solid var(--gr)}
+section{padding:60px 24px}
+.bgs{background:var(--bg)}
+.sw{max-width:1000px;margin:0 auto}
+.ew{font-size:.84rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8C6A00;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.ew::before{content:'';display:inline-block;width:28px;height:3px;background:var(--go);border-radius:2px;flex-shrink:0}
+h2.st{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--dp);margin-bottom:8px;line-height:1.2}
+.sub{font-size:1rem;color:var(--color-text-secondary);margin-bottom:32px;line-height:1.6;max-width:640px}
+.cards{display:grid;gap:20px}
+.cards.c3{grid-template-columns:repeat(3,1fr)}
+.cards.c2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid var(--color-border);border-radius:12px;padding:24px;box-shadow:var(--sh)}
+.card-icon{font-size:1.4rem;margin-bottom:10px}
+.card h3{font-size:1.05rem;font-weight:700;color:var(--dp);margin-bottom:6px}
+.card p{font-size:.95rem;color:var(--color-text-secondary);line-height:1.55}
+.card.t-gold{border-top:3px solid var(--go)}.card.t-blue{border-top:3px solid var(--b)}.card.t-ind{border-top:3px solid var(--ind)}.card.t-green{border-top:3px solid var(--gr)}.card.t-grey{border-top:3px solid var(--gm)}
+.fcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:24px}
+.fch{border-radius:18px;padding:32px;color:#fff;position:relative;overflow:hidden}
+.fch.op{background:linear-gradient(135deg,var(--dp) 0%,#0d3282 100%)}
+.fch.pr{background:linear-gradient(135deg,var(--go) 0%,var(--gd) 100%);color:var(--dp)}
+.fch.pr p{opacity:1}
+.fch h3{font-size:1.2rem;font-weight:700;margin-bottom:10px}
+.fch p{font-size:.95rem;opacity:.82;line-height:1.6}
+.pers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:8px}
+.per{background:#fff;border-radius:14px;padding:24px;box-shadow:var(--sh);border-top:3px solid var(--gb)}
+.per:nth-child(1){border-top-color:var(--go)}.per:nth-child(2){border-top-color:var(--b)}.per:nth-child(3){border-top-color:var(--ind)}.per:nth-child(4){border-top-color:var(--gr)}
+.per h3{font-size:1rem;font-weight:700;color:var(--dp);margin-bottom:8px}
+.per p{font-size:.95rem;color:var(--color-text-secondary);line-height:1.55}
+.stps{display:flex;gap:0;position:relative;margin-top:8px}
+.stps::before{content:'';position:absolute;top:20px;left:calc(16.67% + 12px);right:calc(16.67% + 12px);height:2px;background:linear-gradient(90deg,var(--b),var(--go));z-index:0}
+.stp{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding:0 8px}
+.stp-num{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:#fff;margin-bottom:12px}
+.stp:nth-child(1) .stp-num{background:var(--b)}.stp:nth-child(2) .stp-num{background:linear-gradient(135deg,var(--b),var(--ind))}.stp:nth-child(3) .stp-num{background:var(--go)}
+.stp h4{font-size:1rem;font-weight:700;color:var(--dp);margin-bottom:6px}
+.stp p{font-size:.95rem;color:var(--color-text-secondary);line-height:1.5}
+.wfg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+.wfd{border-radius:12px;padding:24px;color:#fff}
+.wfd.d1{background:var(--b)}.wfd.d2{background:linear-gradient(135deg,var(--b),var(--ind))}.wfd.d3{background:var(--go);color:var(--dp)}
+.wfd h4{font-size:1rem;font-weight:700;margin-bottom:6px}
+.wfd p{font-size:.9rem;opacity:.85;line-height:1.5}
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:8px}
+.tt{border-radius:12px;padding:22px;background:#fff;box-shadow:var(--sh);position:relative;overflow:hidden;transition:box-shadow .2s}
+.tt:hover{box-shadow:var(--sl)}
+.tt::after{content:'';position:absolute;inset:0;opacity:0;transition:opacity .3s;background:rgba(0,112,242,.04)}
+.tt:hover::after{opacity:1}
+.tt.t1{border-top:3px solid var(--b)}.tt.t2{border-top:3px solid var(--go)}.tt.t3{border-top:3px solid var(--ind)}.tt.t4{border-top:3px solid var(--gr)}.tt.t5{border-top:3px solid var(--gm)}.tt.t6{border-top:3px solid var(--dp)}
+a.tt{text-decoration:none;color:inherit;display:block}
+.partial-link{color:var(--color-warning-text);cursor:pointer;text-decoration:underline dotted;font-weight:600;white-space:nowrap}
+.partial-link:hover{text-decoration:underline solid}
+.tt-icon{font-size:1.5rem;margin-bottom:10px;display:block}
+.tt h4{font-size:.95rem;font-weight:700;color:var(--dp);margin-bottom:6px}
+.tt p{font-size:.88rem;color:var(--color-text-secondary);line-height:1.5}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.pill{font-size:.78rem;color:var(--color-accent-text);background:rgba(0,112,242,.08);padding:5px 14px;border-radius:20px;text-decoration:none;border:1px solid rgba(0,112,242,.18);transition:background .2s}
+.pill:hover{background:rgba(0,112,242,.14)}
+.quote-block{background:linear-gradient(135deg,var(--dp) 0%,#0d3282 100%);border-radius:18px;padding:32px 36px;position:relative;overflow:hidden;margin:24px 0}
+.quote-block::before{content:'';position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:rgba(240,171,0,.1)}
+.quote-block blockquote{font-size:1.4rem;font-weight:700;color:#fff;line-height:1.45;position:relative}
+.quote-block cite{font-size:.92rem;color:rgba(99,163,255,1);margin-top:10px;display:block;font-style:normal;position:relative}
+.qs{background:var(--dp);border-radius:18px;padding:52px 44px;position:relative;overflow:hidden;margin-top:8px}
+.qs::before{content:'';position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(93,54,255,.3)}
+.qs::after{content:'';position:absolute;left:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;background:rgba(240,171,0,.15)}
+.qs h2{font-size:1.75rem;font-weight:800;color:#fff;margin-bottom:12px;position:relative}
+.qs p{font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:28px;line-height:1.65;max-width:480px;position:relative}
+.qs .hcta{position:relative}
+.btn-go{background:var(--go);color:var(--dp);border:none;border-radius:20px;padding:14px 32px;font-size:.92rem;font-weight:700;cursor:pointer;transition:background .2s;text-decoration:none;display:inline-flex;align-items:center;touch-action:manipulation}
+.btn-go:hover{background:var(--gd)}
+footer{background:var(--dp);padding:48px 24px 24px;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+.fm{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;position:relative}
+.fbn{color:rgba(99,163,255,.9);font-weight:700;font-size:1rem}
+.fc2{color:rgba(255,255,255,.5);font-size:.88rem;margin-top:6px}
+.flink{color:rgba(99,163,255,.7);text-decoration:none;font-size:.88rem}
+.flink:hover{color:rgba(99,163,255,1)}
+.fs{margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.25);font-size:.78rem;text-align:center;position:relative}
+[data-a]{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+[data-a].in{opacity:1;transform:none}
+[data-a="1"]{transition-delay:.1s}[data-a="2"]{transition-delay:.2s}[data-a="3"]{transition-delay:.3s}
+@media(max-width:640px){.hero{padding:48px 20px 40px}section{padding:40px 20px}.ni{padding:0 16px}.cards.c3,.cards.c2{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}[data-a]{opacity:1!important;transform:none!important;transition:none!important}html{scroll-behavior:auto}}
+footer{padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+a,.btn-p,.btn-s,.btn-go,.ndoc,.hsk,.per,.tt{touch-action:manipulation}
+@media(max-width:768px){.ndoc{padding:11px 18px;min-height:44px;display:inline-flex;align-items:center}.pers{grid-template-columns:1fr 1fr}.cards.c3{grid-template-columns:1fr 1fr}.wfg{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.pers{grid-template-columns:1fr}.wfg{grid-template-columns:1fr}}
+@media(max-width:360px){.nt{font-size:.82rem}.ns{display:none}.ndoc{font-size:.72rem;padding:9px 12px;min-height:auto}.hsk{min-width:80px;padding:12px 14px}.hsk .n{font-size:1.6rem}}
+@media(orientation:landscape) and (max-height:500px){.hero{padding:32px 20px 24px}.hsk{padding:10px 14px}.hsk .n{font-size:1.5rem}}
+@media print{[data-a]{opacity:1!important;transform:none!important}#rb{display:none!important}}
+</style>
+</head>
+<body>
+
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><defs><linearGradient id="sap-logo-gradient" x2="0" y2="1"><stop stop-color="#00b8f1"/><stop offset=".31" stop-color="#0d90d9"/><stop offset=".58" stop-color="#1775c8"/><stop offset=".82" stop-color="#1c65bf"/><stop offset="1" stop-color="#1e5fbb"/></linearGradient><symbol id="sap-logo" viewBox="0 0 41238 20400"><path fill="url(#sap-logo-gradient)" d="M0 20400H20841L41238 0H0"/><path fill="#fff" d="M24473 3836H20413v9652L16867 3833H13351l-3027 8072c-324-2035-2424-2738-4084-3265-1094-351-2255-868-2240-1440 9-468 623-900 1838-838 817 43 1537 109 2971 800l1410-2455C8906 4042 7100 3621 5617 3619h-9c-1728 0-3168 560-4060 1483A3423 3423 0 0 0 577 7470c-23 1245 434 2130 1394 2830 810 594 1846 979 2760 1262 1127 349 2047 653 2036 1300a957 957 0 0 1-267 638c-281 290-713 400-1309 410-1149 24-2000-156-3361-959L577 15442a9377 9377 0 0 0 4600 1222h211c1424-25 2574-431 3492-1171 53-41 100-84 149-128l-412 1085h3683l619-1882a6746 6746 0 0 0 2168 343 6833 6833 0 0 0 2116-325l600 1864h6014V12550h1311c3171 0 5046-1615 5046-4320 0-3011-1822-4394-5701-4394m-9382 8264a3693 3693 0 0 1-1300-228l1287-4059h22l1265 4071a3850 3850 0 0 1-1274 216m9620-2333h-894V6491h894c1193 0 2144 400 2144 1614 0 1260-951 1657-2144 1657"/></symbol></defs></svg>
+
+<div id="rb"></div>
+
+<nav><div id="np"></div><div class="ni"><div class="nlogo"><svg role="img" aria-label="SAP" viewBox="0 0 41238 20400" style="width:44.47px;height:22px;display:block;flex-shrink:0"><use href="#sap-logo"/></svg><div><div class="nt">SAP AI &amp; ML Platform — RFP Response</div><div class="ns">Internal &middot; Employee + Technical</div></div></div><a class="ndoc" href="SAP_AI_ML_RFP_Response.html">Full RFP Answers ↗</a></div></nav>
+
+<div class="hero">
+  <svg class="horb" viewBox="0 0 420 420" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="280" cy="180" r="55" fill="rgba(0,112,242,.04)"><animate attributeName="r" values="55;70;55" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0.2;0.6" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="160" cy="270" r="42" fill="rgba(93,54,255,.04)"><animate attributeName="r" values="42;58;42" dur="8s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.15;0.5" dur="8s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="150" cy="120" r="3.5" fill="rgba(0,112,242,.55)"><animateTransform attributeName="transform" type="translate" values="0,0;5,-8;0,0" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0.85;0.4" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="95" r="2.5" fill="rgba(240,171,0,.7)"><animateTransform attributeName="transform" type="translate" values="0,0;-6,5;0,0" dur="5.2s" begin="0.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;1;0.55" dur="5.2s" begin="0.3s" repeatCount="indefinite"/></circle>
+    <circle cx="340" cy="150" r="4" fill="rgba(93,54,255,.55)"><animateTransform attributeName="transform" type="translate" values="0,0;4,6;0,0" dur="3.8s" begin="0.7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0.9;0.45" dur="3.8s" begin="0.7s" repeatCount="indefinite"/></circle>
+    <circle cx="370" cy="230" r="3" fill="rgba(0,112,242,.65)"><animateTransform attributeName="transform" type="translate" values="0,0;-5,-4;0,0" dur="4.6s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.95;0.5" dur="4.6s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="330" cy="320" r="3.5" fill="rgba(240,171,0,.6)"><animateTransform attributeName="transform" type="translate" values="0,0;6,-5;0,0" dur="4.3s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0.85;0.45" dur="4.3s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="210" cy="360" r="2.5" fill="rgba(93,54,255,.65)"><animateTransform attributeName="transform" type="translate" values="0,0;-4,4;0,0" dur="5.4s" begin="1.3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;1;0.5" dur="5.4s" begin="1.3s" repeatCount="indefinite"/></circle>
+    <circle cx="110" cy="330" r="3.5" fill="rgba(0,112,242,.55)"><animateTransform attributeName="transform" type="translate" values="0,0;5,3;0,0" dur="3.7s" begin="0.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.45;0.85;0.45" dur="3.7s" begin="0.9s" repeatCount="indefinite"/></circle>
+    <circle cx="70" cy="240" r="2.5" fill="rgba(240,171,0,.65)"><animateTransform attributeName="transform" type="translate" values="0,0;4,-6;0,0" dur="4.9s" begin="0.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.95;0.5" dur="4.9s" begin="0.2s" repeatCount="indefinite"/></circle>
+    <circle cx="85" cy="155" r="3" fill="rgba(93,54,255,.6)"><animateTransform attributeName="transform" type="translate" values="0,0;-5,5;0,0" dur="4.1s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.9;0.5" dur="4.1s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="300" cy="190" r="3" fill="rgba(0,112,242,.4)"><animateTransform attributeName="transform" type="translate" values="0,0;-4,-5;0,0" dur="5.8s" begin="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0.75;0.35" dur="5.8s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <circle cx="140" cy="200" r="2.5" fill="rgba(93,54,255,.5)"><animateTransform attributeName="transform" type="translate" values="0,0;5,-3;0,0" dur="4.4s" begin="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.4;0.8;0.4" dur="4.4s" begin="1.6s" repeatCount="indefinite"/></circle>
+    <line x1="150" y1="120" x2="260" y2="95" stroke="rgba(0,112,242,.25)" stroke-width="1"><animate attributeName="stroke-opacity" values="0;0.4;0" dur="3s" begin="1.2s" repeatCount="indefinite"/></line>
+    <line x1="340" y1="150" x2="370" y2="230" stroke="rgba(93,54,255,.25)" stroke-width="1"><animate attributeName="stroke-opacity" values="0;0.4;0" dur="3.8s" begin="2.1s" repeatCount="indefinite"/></line>
+    <line x1="330" y1="320" x2="370" y2="230" stroke="rgba(240,171,0,.25)" stroke-width="1"><animate attributeName="stroke-opacity" values="0;0.35;0" dur="4.2s" begin="0.6s" repeatCount="indefinite"/></line>
+    <line x1="85" y1="155" x2="150" y2="120" stroke="rgba(0,112,242,.2)" stroke-width="1"><animate attributeName="stroke-opacity" values="0;0.35;0" dur="3.4s" begin="1.9s" repeatCount="indefinite"/></line>
+    <line x1="110" y1="330" x2="210" y2="360" stroke="rgba(93,54,255,.2)" stroke-width="1"><animate attributeName="stroke-opacity" values="0;0.3;0" dur="5s" begin="0.8s" repeatCount="indefinite"/></line>
+  </svg>
+  <div class="hi">
+    <div class="hbadge"><span class="hbadge-dot"></span>RFP Response &nbsp;&middot;&nbsp; October 2026</div>
+    <h1>SAP AI &amp; ML Platform</h1>
+    <p class="hsub">A structured vendor response to 100 RFP questions across 10 categories — covering architecture, security, performance, model development, GenAI, and enterprise integration.</p>
+    <div class="hcta">
+      <a class="btn-p" href="SAP_AI_ML_RFP_Response.html">Read All 100 Q&amp;A ↗</a>
+      <a class="btn-s" href="#s4">Coverage by Category</a>
+    </div>
+    <div class="hstats">
+      <div class="hsk bl"><span class="n">100</span><span class="l">Questions Answered</span></div>
+      <div class="hsk go"><span class="n">95</span><span class="l">Full Coverage ✅</span></div>
+      <div class="hsk ind"><span class="n">5</span><span class="l">Partial Coverage ⚠️</span></div>
+      <div class="hsk gr"><span class="n">10</span><span class="l">RFP Categories</span></div>
+    </div>
+    <p style="font-size:.82rem;color:var(--gm);margin-top:20px;animation:fadeUp .6s ease .6s both">📋 This is a summary — <a href="SAP_AI_ML_RFP_Response.html" style="color:var(--color-accent-text);font-weight:600">open the full RFP response</a> for all 100 answers, filterable by category &amp; coverage status.</p>
+  </div>
+</div>
+
+<!-- S1: Platform Overview — Format Cards -->
+<section id="s1">
+  <div class="sw">
+    <div class="ew" data-a>Platform Overview</div>
+    <h2 class="st" data-a>Three Layers. One Enterprise AI Stack.</h2>
+    <p class="sub" data-a>SAP's platform integrates data governance, model lifecycle management, and generative AI in a single Kubernetes-native stack — hyperscaler-agnostic across AWS, Azure, and GCP.</p>
+    <div class="fcs">
+      <div class="fch op" data-a="1">
+        <h3>🔧 Three-Layer Architecture</h3>
+        <p><strong>Data Foundation</strong> — SAP Business Data Cloud, Datasphere, and HANA Cloud unify SAP and non-SAP data with semantic modelling, vector/graph capabilities, lineage, and governance.<br><br><strong>AI Foundation</strong> — SAP AI Core (Kubernetes-native, Argo Workflows, KServe) manages the full ML lifecycle. Generative AI Hub abstracts GPT-4, Claude, Gemini, and Mistral behind a single API.<br><br><strong>Agentic Layer</strong> — Joule and AI Agent Hub enable autonomous, multi-step enterprise task execution grounded in governed data.</p>
+      </div>
+      <div class="fch pr" data-a="2">
+        <h3>Enterprise-Ready by Design</h3>
+        <p><strong>ISO 42001</strong> certified AI management system — the leading enterprise vendor with this certification.<br><br><strong>27,000+</strong> companies running SAP Business AI in production across <strong>20+ global regions</strong>.<br><br>Compliant with SOC 2 Type II, ISO 27001, GDPR, EU AI Act, HIPAA, and FedRAMP. AES-256 at rest, TLS 1.2+ in transit, customer-managed keys via SAP Data Custodian.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S2: How It Works — 3-Step Workflow -->
+<section class="bgs" id="s2">
+  <div class="sw">
+    <div class="ew" data-a>How It Works</div>
+    <h2 class="st" data-a>From Governed Data to AI-Powered Outcomes</h2>
+    <p class="sub" data-a>SAP's platform covers the full enterprise AI lifecycle — from secure data ingestion and model training through serving, monitoring, and agentic automation.</p>
+    <div class="stps">
+      <div class="stp" data-a="1">
+        <div class="stp-num">1</div>
+        <h4>Unify &amp; Govern Data</h4>
+        <p>SAP Business Data Cloud and Datasphere consolidate SAP and third-party sources — Databricks, Snowflake, BigQuery, Kafka, S3, Azure Blob — with end-to-end lineage, PII masking, row/column security, and Master Data Governance.</p>
+      </div>
+      <div class="stp" data-a="2">
+        <div class="stp-num">2</div>
+        <h4>Build, Train &amp; Deploy</h4>
+        <p>SAP AI Core runs any ML framework (TensorFlow, PyTorch, Hugging Face, scikit-learn) as Docker containers via Argo Workflow training pipelines and KServe serving with HPA. GenAI Hub routes LLM requests with content filtering, data masking, and prompt management.</p>
+      </div>
+      <div class="stp" data-a="3">
+        <div class="stp-num">3</div>
+        <h4>Integrate &amp; Automate</h4>
+        <p>Model outputs flow into S/4HANA, SuccessFactors, and Ariba via SAP Integration Suite. Joule and AI Agent Hub automate multi-step processes on governed data. AI Launchpad and SAP Cloud ALM provide end-to-end audit trails for GDPR and EU AI Act compliance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3: Core Capabilities — Card Grid -->
+<section id="s3">
+  <div class="sw">
+    <div class="ew" data-a>Core Capabilities</div>
+    <h2 class="st" data-a>Six Dimensions of Enterprise AI Readiness</h2>
+    <p class="sub" data-a>All five partial answers reflect areas where SAP provides the platform foundation — application-layer patterns such as semantic caching or canary deployments are customer-implemented.</p>
+    <div class="cards c3">
+      <div class="card t-blue" data-a="1">
+        <div class="card-icon" aria-hidden="true">🔒</div>
+        <h3>Security &amp; Compliance</h3>
+        <p>AES-256 at rest, TLS 1.2+ in transit, customer-managed keys via Data Custodian. ISO 42001, SOC 2 Type II, GDPR, EU AI Act, HIPAA, FedRAMP. OAuth 2.0 + mTLS + SAML 2.0 IdP federation. PII masking in LLM prompts via Orchestration Service.</p>
+      </div>
+      <div class="card t-gold" data-a="2">
+        <div class="card-icon" aria-hidden="true">📊</div>
+        <h3>Performance &amp; Scale</h3>
+        <p>Kubernetes HPA with GPU-accelerated training and inference. Scale-to-zero for cost optimisation; always-on for latency-sensitive use cases. HANA Cloud handles petabyte-scale in-memory analytics at sub-millisecond latency via PAL in-database scoring.</p>
+      </div>
+      <div class="card t-ind" data-a="3">
+        <div class="card-icon" aria-hidden="true">🧠</div>
+        <h3>Model Development</h3>
+        <p>Any ML framework as Docker containers on AI Core. Argo Workflows for training pipelines. KServe for serving with autoscaling. GitOps versioning, metric-gated promotion, and rollback. SHAP-based explainability with LLM-generated summaries via GenAI Hub.</p>
+      </div>
+      <div class="card t-green" data-a="1">
+        <div class="card-icon" aria-hidden="true">✨</div>
+        <h3>Generative AI &amp; LLMs</h3>
+        <p>Single API access to GPT-4o, Claude 3, Gemini 1.5, Mistral, and SAP-hosted open-source models. Orchestration Service V2 composes retrieval grounding, content filtering, data masking, and prompt management. Inference Observability Service logs all prompts and responses.</p>
+      </div>
+      <div class="card t-grey" data-a="2">
+        <div class="card-icon" aria-hidden="true">🗂️</div>
+        <h3>Data Governance</h3>
+        <p>End-to-end lineage from source through transformations to AI predictions. Datasphere Catalog with business glossary and impact analysis. Master Data Governance for policy enforcement and stewardship. Customer data is never used to train foundation models.</p>
+      </div>
+      <div class="card t-blue" data-a="3">
+        <div class="card-icon" aria-hidden="true">🎯</div>
+        <h3>UX &amp; Integration</h3>
+        <p>SAP AI Launchpad on SAPUI5/Fiori — WCAG 2.1 AA accessible. Role-based access for producers, consumers, and GenAI experimenters. Connects to S/4HANA, SuccessFactors, Ariba via SAP Integration Suite. MCP server support for AI agent tool integration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S4: RFP Category Coverage — Tool Tiles -->
+<section class="bgs" id="s4">
+  <div class="sw">
+    <div class="ew" data-a>RFP Coverage</div>
+    <h2 class="st" data-a>10 Categories · 100 Questions · 95% Full</h2>
+    <p class="sub" data-a>Six categories achieve 100% full coverage. Four categories have one partial answer each — all documented with gap notes and workarounds in the full interactive response.</p>
+    <div class="tg">
+      <a class="tt t1" href="SAP_AI_ML_RFP_Response.html?cat=1" data-a="1" title="Filter: General Solution">
+        <span class="tt-icon" aria-hidden="true">🏗️</span>
+        <h4>1 · General Solution</h4>
+        <p>Q1–Q10 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">10/10 Full</strong></p>
+      </a>
+      <a class="tt t2" href="SAP_AI_ML_RFP_Response.html?cat=2" data-a="2" title="Filter: Security &amp; Governance">
+        <span class="tt-icon" aria-hidden="true">🔒</span>
+        <h4>2 · Security &amp; Governance</h4>
+        <p>Q11–Q20 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">10/10 Full</strong></p>
+      </a>
+      <a class="tt t3" href="SAP_AI_ML_RFP_Response.html?cat=3" data-a="3" title="Filter: Performance &amp; Scale">
+        <span class="tt-icon" aria-hidden="true">⚡</span>
+        <h4>3 · Performance &amp; Scale</h4>
+        <p>Q21–Q30 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">9/10 Full</strong> · <span class="partial-link" onclick="event.preventDefault();event.stopPropagation();window.location.href='SAP_AI_ML_RFP_Response.html?cat=3&cov=partial'" title="Show partial answers only">1 Partial ↗</span></p>
+      </a>
+      <a class="tt t4" href="SAP_AI_ML_RFP_Response.html?cat=4" data-a="1" title="Filter: Model Development">
+        <span class="tt-icon" aria-hidden="true">🧬</span>
+        <h4>4 · Model Development</h4>
+        <p>Q31–Q40 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">9/10 Full</strong> · <span class="partial-link" onclick="event.preventDefault();event.stopPropagation();window.location.href='SAP_AI_ML_RFP_Response.html?cat=4&cov=partial'" title="Show partial answers only">1 Partial ↗</span></p>
+      </a>
+      <a class="tt t5" href="SAP_AI_ML_RFP_Response.html?cat=5" data-a="2" title="Filter: User Experience">
+        <span class="tt-icon" aria-hidden="true">🖥️</span>
+        <h4>5 · User Experience</h4>
+        <p>Q41–Q50 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">9/10 Full</strong> · <span class="partial-link" onclick="event.preventDefault();event.stopPropagation();window.location.href='SAP_AI_ML_RFP_Response.html?cat=5&cov=partial'" title="Show partial answers only">1 Partial ↗</span></p>
+      </a>
+      <a class="tt t6" href="SAP_AI_ML_RFP_Response.html?cat=6" data-a="3" title="Filter: Implementation &amp; Support">
+        <span class="tt-icon" aria-hidden="true">🛠️</span>
+        <h4>6 · Implementation &amp; Support</h4>
+        <p>Q51–Q60 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">10/10 Full</strong></p>
+      </a>
+      <a class="tt t1" href="SAP_AI_ML_RFP_Response.html?cat=7" data-a="1" title="Filter: Cost &amp; Licensing">
+        <span class="tt-icon" aria-hidden="true">💰</span>
+        <h4>7 · Cost &amp; Licensing</h4>
+        <p>Q61–Q70 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">9/10 Full</strong> · <span class="partial-link" onclick="event.preventDefault();event.stopPropagation();window.location.href='SAP_AI_ML_RFP_Response.html?cat=7&cov=partial'" title="Show partial answers only">1 Partial ↗</span></p>
+      </a>
+      <a class="tt t2" href="SAP_AI_ML_RFP_Response.html?cat=8" data-a="2" title="Filter: Innovation &amp; Future">
+        <span class="tt-icon" aria-hidden="true">🔭</span>
+        <h4>8 · Innovation &amp; Future</h4>
+        <p>Q71–Q80 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">10/10 Full</strong></p>
+      </a>
+      <a class="tt t3" href="SAP_AI_ML_RFP_Response.html?cat=9" data-a="3" title="Filter: Vendor Credentials">
+        <span class="tt-icon" aria-hidden="true">🏅</span>
+        <h4>9 · Vendor Credentials</h4>
+        <p>Q81–Q90 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">10/10 Full</strong></p>
+      </a>
+      <a class="tt t4" href="SAP_AI_ML_RFP_Response.html?cat=10" data-a="1" title="Filter: LLM &amp; Generative AI">
+        <span class="tt-icon" aria-hidden="true">🤖</span>
+        <h4>10 · LLM &amp; Generative AI</h4>
+        <p>Q91–Q100 &nbsp;·&nbsp; <strong style="color:var(--color-positive-text)">10/10 Full</strong></p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- S5: Stakeholder Roles — Persona Cards -->
+<section id="s5">
+  <div class="sw">
+    <div class="ew" data-a>Stakeholder Roles</div>
+    <h2 class="st" data-a>Built for Every Team in the AI Lifecycle</h2>
+    <p class="sub" data-a>SAP AI Launchpad provides role-based access and purpose-built tooling for each team involved in building, running, and consuming enterprise AI at scale.</p>
+    <div class="pers">
+      <div class="per" data-a="1">
+        <h3>Data Scientists &amp; ML Engineers</h3>
+        <p>Containerise any framework and deploy to AI Core. Argo Workflow training pipelines with GPU support. GitOps versioning, metric tracking, model comparison (up to 5 versions side-by-side), and SHAP explainability in AI Launchpad.</p>
+      </div>
+      <div class="per" data-a="2">
+        <h3>AI Application Developers</h3>
+        <p>Build LLM apps with GenAI Hub SDK, LangChain, and Orchestration Service V2. CAP framework for BTP-native custom applications. MCP server connectivity for agent tool integration. Prompt management, grounding, and evaluation from SAP Datasphere.</p>
+      </div>
+      <div class="per" data-a="3">
+        <h3>IT &amp; Platform Architects</h3>
+        <p>Kubernetes-native, multi-tenant deployment on AWS, Azure, or GCP. Resource groups for team isolation. RBAC + OAuth 2.0 + SAML 2.0 IdP federation. SAP Cloud ALM for landscape-level monitoring, alerting, and change management across the full stack.</p>
+      </div>
+      <div class="per" data-a="1">
+        <h3>Business &amp; Line of Business</h3>
+        <p>Joule copilot for natural-language enterprise automation. Datasphere self-service analytics with governed data products. Pre-built AI content for HR, Finance, and Supply Chain. AI Agent Hub for governed, auditable multi-step automation workflows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S6: CTA -->
+<section id="s6">
+  <div class="sw">
+    <div class="qs" data-a>
+      <h2>Explore the Full RFP Response</h2>
+      <p>100 questions answered in depth — expandable by category, filterable by coverage status (Full / Partial), and searchable across all 10 areas. Architecture references and SAP Help documentation linked throughout.</p>
+      <div class="hcta">
+        <a class="btn-go" href="SAP_AI_ML_RFP_Response.html">Open Full RFP Response ↗</a>
+        <a class="btn-s" style="color:#fff;border-color:rgba(255,255,255,.35)" href="https://help.sap.com/docs/sap-ai-core">SAP AI Core Docs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fm">
+    <div>
+      <div class="fbn">SAP SE — AI &amp; ML Platform</div>
+      <div class="fc2">SAP Business Data Cloud &nbsp;&middot;&nbsp; AI Core &nbsp;&middot;&nbsp; Generative AI Hub &nbsp;&middot;&nbsp; AI Launchpad &nbsp;&middot;&nbsp; Joule</div>
+    </div>
+    <div>
+      <a class="flink" href="https://help.sap.com/docs/sap-ai-core">SAP AI Core Docs</a><br>
+      <a class="flink" href="https://help.sap.com/docs/sap-datasphere">SAP Datasphere Docs</a><br>
+      <a class="flink" href="https://www.sap.com/products/artificial-intelligence/ai-ethics.html">SAP AI Ethics</a>
+    </div>
+  </div>
+  <div class="fm" style="margin-top:0">
+    <p class="fs">Source: SAP_AI_ML_RFP_Response.html &nbsp;&middot;&nbsp; Internal &nbsp;&middot;&nbsp; Employee + Technical &nbsp;&middot;&nbsp; October 2026 &nbsp;&middot;&nbsp; Review by April 2027</p>
+  </div>
+</footer>
+
+<script>
+// Scroll progress
+window.addEventListener('scroll',function(){
+  var d=document.documentElement;
+  var p=(d.scrollTop||document.body.scrollTop)/(d.scrollHeight-d.clientHeight)*100;
+  var np=document.getElementById('np');
+  if(np)np.style.width=p+'%';
+},{passive:true});
+
+// Scroll animations
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+},{threshold:0.12});
+document.querySelectorAll('[data-a]').forEach(function(el){obs.observe(el);});
+
+// Review banner
+(function(){
+  var m=document.querySelector('meta[name="kc-review-date"]');
+  if(!m)return;
+  var rv=new Date(m.getAttribute('content'));var now=new Date();
+  var diff=(rv-now)/86400000;var rb=document.getElementById('rb');
+  if(!rb)return;
+  if(diff<0){rb.style.cssText='display:block;background:#FFF3CD;color:#856404;border-bottom:2px solid #F0AB00;padding:6px 16px;text-align:center;font-size:.8rem;font-family:Arial,sans-serif;position:fixed;top:0;left:0;right:0;z-index:2000;';rb.textContent='This content is overdue for review. Please verify accuracy before sharing.';}
+  else if(diff<30){rb.style.cssText='display:block;background:#E8F0FE;color:#00144a;border-bottom:2px solid #0070F2;padding:6px 16px;text-align:center;font-size:.8rem;font-family:Arial,sans-serif;position:fixed;top:0;left:0;right:0;z-index:2000;';rb.textContent='Review due in '+Math.ceil(diff)+' days - please check for updates.';}
+})();
+</script>
+
+</body>
+</html>
